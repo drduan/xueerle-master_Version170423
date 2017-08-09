@@ -91,8 +91,11 @@ public class English_framents_for_homeWork extends Fragment  implements DatePick
                             if ("英语".equals(dataitem.getString("subject"))) {
                                 List<HomeWork_Entity> homeWork_entities = JSON.parseArray(dataitem.get("homework").toString(), HomeWork_Entity.class);
                                 Collections.sort(homeWork_entities);
+                                int position=1;
                                 for (HomeWork_Entity homeWork_entity : homeWork_entities) {
-                                    stringList.add(homeWork_entity.getWorkname() + "   发布人:" + dataitem.get("jobperson"));
+//                                    stringList.add(homeWork_entity.getWorkname() + "   发布人:" + dataitem.get("jobperson"));
+                                    stringList.add(position+"  "+homeWork_entity.getWorkname() );
+                                    position++;
                                 }
 
                                 data1 = dataitem.getString("date1");

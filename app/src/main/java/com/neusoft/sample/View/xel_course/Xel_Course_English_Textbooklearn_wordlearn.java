@@ -115,7 +115,8 @@ public class Xel_Course_English_Textbooklearn_wordlearn extends BaseActivity {
         String url[] = Stitching.get_word_learn(ke_id);
         url_tu = url[0]+word+"%20"+tupian1+png;
        // url_tu = url[0]+"04.jpg";
-        url_yin = url[1]+word+".mp3";
+        url_yin = url[1]+accept.get(word_num).getSound()+".mp3";
+
         Log.d("@@","音频路径"+url_yin+"图"+url_tu);
     }
 
@@ -313,13 +314,16 @@ public class Xel_Course_English_Textbooklearn_wordlearn extends BaseActivity {
         img_voice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(accept.get(word_num).isSound()) {
-                    Toast.makeText(Xel_Course_English_Textbooklearn_wordlearn.this, "小乐正在为您加载音频，请稍等！", Toast.LENGTH_SHORT).show();
-                    mService.playMusics(url_yin);
+                Log.d("@@","aa"+accept.get(word_num));
+                Toast.makeText(Xel_Course_English_Textbooklearn_wordlearn.this, "小乐正在为您加载音频，请稍等！", Toast.LENGTH_SHORT).show();
+                mService.playMusics(url_yin);
+                /*accept.get(word_num).getSound();*/
+               /* if(!accept.get(word_num).getSound().equals("")) {
+
                 }
                 else {
                     Toast.makeText(Xel_Course_English_Textbooklearn_wordlearn.this, "此单词没有语音", Toast.LENGTH_SHORT).show();
-                }
+                }*/
             }
         });
         /*

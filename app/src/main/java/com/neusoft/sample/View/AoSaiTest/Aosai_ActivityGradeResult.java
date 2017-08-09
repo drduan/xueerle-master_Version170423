@@ -181,8 +181,7 @@ public class Aosai_ActivityGradeResult extends BaseActivity {
         do_agin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent_doagin = new Intent(Aosai_ActivityGradeResult.this, BottomTabSwitcherActivity.class);
-                startActivity(intent_doagin);
+
                 finish();
             }
         });

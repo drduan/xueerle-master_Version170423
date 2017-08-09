@@ -52,7 +52,7 @@ import java.util.List;
 
 import static com.neusoft.sample.View.BaseFragment.ARGS_INSTANCE;
 
-public class xel_mine_parent_fragment extends Fragment implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public class xel_mine_parent_fragment extends Fragment implements View.OnClickListener {
 
     public static final String TAG = "parent_fragment";
     private LinearLayout header_ly,coach_ly,notify_ly,rankList_ly,courseBuy_ly,learnTrack_ly,necessaryPoem_ly,
@@ -146,7 +146,6 @@ public class xel_mine_parent_fragment extends Fragment implements View.OnClickLi
                     System.out.println("11111");
                     recitePermission_tg.setChecked(false);
                 }
-                thread.interrupt();
             }
         };
 
@@ -198,7 +197,9 @@ public class xel_mine_parent_fragment extends Fragment implements View.OnClickLi
         checkForUpdate_ly.setOnClickListener(this);
         exit_ly.setOnClickListener(this);
 
-        recitePermission_tg.setOnCheckedChangeListener(this);
+//        recitePermission_tg.setOnCheckedChangeListener(this);
+        recitePermission_tg.setOnClickListener(this);
+
 
     }
 
@@ -308,54 +309,53 @@ public class xel_mine_parent_fragment extends Fragment implements View.OnClickLi
             case R.id.mine_parent_exit_ly:
                 new ExitApplicationAction(getContext(),getActivity());
                 break;
+            case R.id.mine_parent_recitePermission_tg:
+                final HashMap hashMap=new HashMap();
+                System.out.println("开关权限："+recitePermission_tg.isChecked());
+                //0 表示开 1表示关
+                if (recitePermission_tg.isChecked()==true)
+                {
+
+                    System.out.println("你老子已经把它开了，你可以看单词列表了");
+                    hashMap.clear();
+                    hashMap.put("power","0");
+                    String phone= MsharedPrefrence.Getphonewsd(getContext())[0];
+                    hashMap.put("phone",phone);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                String respones= Post_Pushwork.getStringCha(Constant.editpower,hashMap);
+                                System.out.println("修改权限结果"+respones);
+                                hashMap.clear();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+                }else {
+                    System.out.println("你老子已经把它关了，你不能看单词列表了");
+                    hashMap.clear();
+                    hashMap.put("power","1");
+                    String phone= MsharedPrefrence.Getphonewsd(getContext())[0];
+                    hashMap.put("phone",phone);
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                String respones= Post_Pushwork.getStringCha(Constant.editpower,hashMap);
+                                System.out.println("修改权限结果"+respones);
+                                hashMap.clear();
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    }).start();
+                }
+                break;
         }
 
     }
 
-    /**
-     * Called when the checked state of a compound button has changed.
-     *
-     * @param buttonView The compound button view whose state has changed.
-     * @param isChecked  The new checked state of buttonView.
-     */
-    @Override
-    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-        final HashMap hashMap=new HashMap();
-        //0 表示开 1表示关
-        if (isChecked==true)
-        {
 
-            System.out.println("你老子已经把它开了，你可以看单词列表了");
-            hashMap.clear();
-            hashMap.put("power","0");
-            String phone= MsharedPrefrence.Getphonewsd(getContext())[0];
-            hashMap.put("phone",phone);
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        String respones= Post_Pushwork.getStringCha(Constant.editpower,hashMap);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }else {
-            System.out.println("你老子已经把它关了，你不能看单词列表了");
-            hashMap.clear();
-            hashMap.put("power","1");
-            String phone= MsharedPrefrence.Getphonewsd(getContext())[0];
-            hashMap.put("phone",phone);
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        String respones= Post_Pushwork.getStringCha(Constant.editpower,hashMap);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }).start();
-        }
-    }
 }

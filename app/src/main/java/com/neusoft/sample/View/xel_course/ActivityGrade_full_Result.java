@@ -126,16 +126,30 @@ public class ActivityGrade_full_Result extends BaseActivity {
         for (TextOneStructure textOneStructure : textOneStructureList) {
             if (group_number.substring(0, 7).equals(textOneStructure.getChapterNo()))
             {
-                tv_full_zhang.setText(""+"第"+ group_number.substring(5, 7)+"章 "+"   "+textOneStructure.getChapterName());
-                tv_full_jie.setSingleLine();
-                tv_full_jie.setEllipsize(TextUtils.TruncateAt.valueOf("END"));
+                if(!"5".equals(group_number.substring(0,1))) {
+                    tv_full_zhang.setText("" + "第" + group_number.substring(5, 7) + "章 " + "   " + textOneStructure.getChapterName());
+                }
+                else {
+
+                    tv_full_zhang.setText("" + "第" + group_number.substring(5, 7) + "章 " + "   " + textOneStructure.getChapterSequenceName());
+
+                }
+                break;
             }
         }
         List<TextTwoStructure> textTwoStructureList= Db_TextTwoStructureService.getInstance(this).loadAllNote();
         for (TextTwoStructure textTwoStructure : textTwoStructureList) {
             if (group_number.substring(0, 9).equals(textTwoStructure.getSectionNo()))
             {
-                tv_full_jie.setText(""+"第"+ group_number.substring(7, 9)+"节 "+"   "+textTwoStructure.getSectionName());
+                if(!"5".equals(group_number.substring(0,1))) {
+                    tv_full_jie.setText("" + "第" + group_number.substring(7, 9) + "节 " + "   " + textTwoStructure.getSectionName());
+                    tv_full_jie.setSingleLine();
+                    tv_full_jie.setEllipsize(TextUtils.TruncateAt.valueOf("END"));
+                }
+                else {
+                    tv_full_jie.setVisibility(View.GONE);
+                }
+                break;
             }
         }
        // tv_full_jie.setText(""+"第"+ group_number.substring(7, 9)+"节 ");

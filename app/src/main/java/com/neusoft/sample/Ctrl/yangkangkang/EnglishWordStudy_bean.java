@@ -8,7 +8,7 @@ public class EnglishWordStudy_bean implements Comparable<EnglishWordStudy_bean>{
 	private String itemNo;       		  //英语单词学习项编号
 	private String word;       			  //单词
 	private String soundmark;   		  //音标
-	private boolean isSound;     		  //是否有单词语音   0无  1有
+	private String sound;     		  //修改后  取消判断字段   直接返回的是  音频名称
 	private String kb_paraphrase;		  //课本释义词性
 	private boolean wordPicture1;		  //是否有单词图片1   0无  1有
 	private String translate;    		  //课本释义
@@ -52,12 +52,15 @@ public class EnglishWordStudy_bean implements Comparable<EnglishWordStudy_bean>{
 	public void setSoundmark(String soundmark) {
 		this.soundmark = soundmark;
 	}
-	public boolean isSound() {
-		return isSound;
+
+	public String getSound() {
+		return sound;
 	}
-	public void setSound(boolean isSound) {
-		this.isSound = isSound;
+
+	public void setSound(String sound) {
+		this.sound = sound;
 	}
+
 	public String getKb_paraphrase() {
 		return kb_paraphrase;
 	}

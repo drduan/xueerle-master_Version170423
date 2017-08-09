@@ -17,6 +17,8 @@ import java.util.List;
 public class LookUpAdapter extends BaseAdapter{
     Context context;
     List<String> it;
+    private TextView bianhao;
+
     private TextView contextid;
     public LookUpAdapter(Context context, List<String> it) {
         this.context=context;
@@ -44,13 +46,15 @@ public class LookUpAdapter extends BaseAdapter{
         if (convertView==null)
         {
             convertView= LayoutInflater.from(context).inflate(R.layout.lookupadapter_customview,null);
-             contextid= (TextView) convertView.findViewById(R.id.contextid);
+            bianhao = (TextView) convertView.findViewById(R.id.bianhao);
+            contextid= (TextView) convertView.findViewById(R.id.contextid);
             convertView.setTag(convertView);
         }else {
 
             convertView= (View) convertView.getTag();
         }
         contextid.setText(it.get(position));
+
         return convertView;
     }
     public void setDate( List<String> it){

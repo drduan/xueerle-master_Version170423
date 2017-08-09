@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
@@ -34,6 +35,7 @@ import com.neusoft.sample.View.AlwaysMarqueeTextView;
 import com.neusoft.sample.View.BaseActivity;
 import com.neusoft.sample.View.Mp3.MusicPlayService;
 import com.neusoft.sample.View.xel_course.Xel_Course_English_Textbooklearn_wordlearn;
+import com.neusoft.sample.View.xel_course.xel_course_chinese_textbooklearn;
 import com.neusoft.sample.View.xel_mine.MyHomeWork.get_tingxie;
 
 import org.json.JSONException;
@@ -92,6 +94,11 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
     private TextView  tv_curcentTime, tv_allTime,tv_eng_congtent;
     private SeekBar seekBar1;// 播放进度条
     private MusicPlayService mService;
+
+    //听写权限
+    private Handler handlerpower;
+    private Thread threadpower;
+    private String powersingle;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -99,6 +106,9 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
         bool = Consant_stringg.is_internet(this);
         application = (App) getApplication();
         mService = application.getmService();
+
+        loadPowerByListen();
+
         img_back = (ImageButton) findViewById(R.id.img_back);
         eng_learn_text = (AlwaysMarqueeTextView) findViewById(R.id.course_eng_learn);
         eng_learn_text.setText("课程>英语>课本学习>"+ke_name);
@@ -115,12 +125,60 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
         setListener();
     }
 
+    private void loadPowerByListen() {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                get_tingxie get_tingxie = new get_tingxie();
+                HashMap hashMap = new HashMap();
+                hashMap.put("user_id", App.newInstance().GetSharePrefrence_kejiezu(Xel_Course_English_TextBookLearn.this));
+                try {
+                    Log.d("@@", "user_id" +  App.newInstance().GetSharePrefrence_kejiezu(Xel_Course_English_TextBookLearn.this));
+                    String responsee = Post_learn_rijiyuelei.getStringCha(Constant.findpower, hashMap);
+                    Log.d("@@", "respose" + responsee);
+                    JSONObject jsonObjec = null;
+                    jsonObjec = new JSONObject(responsee);
+                    String power = null;
+                    power = jsonObjec.getString("data");
+
+                    Message message=new Message();
+                    Bundle bundle=new Bundle();
+                    bundle.putString("power",power);
+                    message.setData(bundle);
+                    handlerpower.sendMessage(message);
+                } catch (IOException e) {
+                    Log.d("@@","catch1"+e);
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    Log.d("@@","catch2");
+                    e.printStackTrace();
+                }
+            }
+
+
+
+        };
+        threadpower=new Thread(runnable);
+        threadpower.start();
+        handlerpower=new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                powersingle=msg.getData().getString("power");
+
+                System.out.println("@@@p"+powersingle);
+
+            }
+        };
+    }
+
     /*
     * 解析接受过来的的教材编号  和名称*/
     private void Init_accept() {
         Intent  acc_intent= getIntent();
          num = acc_intent.getStringExtra("ke_id");
         num_beidanci = num+"00";
+        Log.d("@@","aa"+num_beidanci);
         String name = acc_intent.getStringExtra("ke_name");
         ke_id = num.substring(0,5);
         ke_zhang = num.substring(num.length()-2,num.length());
@@ -269,6 +327,7 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
                         handler.post(updateThread);
                     }
                 }).start();
+                get_tingxie.get_power(Xel_Course_English_TextBookLearn.this);
                 map.put("No",num+"0");//向map  赋值
                 urll = Constant.post_english_danci;//赋值请求生子听写答案接口路径
                 Init_post_tingxie(1);//向后台请求听写答案
@@ -290,6 +349,7 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
                      handler.post(updateThread);
                  }
              }).start();
+                get_tingxie.get_power(Xel_Course_English_TextBookLearn.this);
                 map.put("No",num+"1");//向map  赋值
                 urll = Constant.post_english_danci;//赋值请求生子听写答案接口路径
                 eng_chi = 0;
@@ -311,6 +371,7 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
                         handler.post(updateThread);
                     }
                 }).start();
+                get_tingxie.get_power(Xel_Course_English_TextBookLearn.this);
                 map.put("No",num+"0");//向map  赋值
                 urll = Constant.post_english_zhongwen;//赋值请求生子听写答案接口路径
                 eng_chi = 1;
@@ -332,6 +393,7 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
                         handler.post(updateThread);
                     }
                 }).start();
+                get_tingxie.get_power(Xel_Course_English_TextBookLearn.this);
                 map.put("No",num+"1");//向map  赋值
                 urll = Constant.post_english_zhongwen;//赋值请求生子听写答案接口路径
                 eng_chi = 1;
@@ -348,6 +410,8 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
                 }else {
                     final HashMap<String, String> map = new HashMap<>();
                     map.put("No", num_beidanci);
+                    Log.d("aa",""+num_beidanci);
+
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -482,7 +546,8 @@ public class Xel_Course_English_TextBookLearn extends BaseActivity implements Vi
     private void Ini_update_tingxieview() {
         if(succ) {
             succ = false;
-            if (!((get_tingxie.a).equals("1"))) {
+            System.out.println("@@@"+powersingle);
+            if ("0".equals(powersingle)) {
                 Log.d("@@", " 播放完毕");
                 List<TingXieAnswer_item> list_item = new ArrayList<>();
                 Collections.sort(tingxie);

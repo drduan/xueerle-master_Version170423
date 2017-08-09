@@ -81,7 +81,6 @@ public class ParentLookUpWork extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 submit();
-
             }
         });
 
@@ -126,13 +125,8 @@ public class ParentLookUpWork extends AppCompatActivity{
                     if(checkedId/arrayList_class.size()!=0){
                         checkedId = checkedId-(checkedId/arrayList_class.size())*arrayList_class.size();
                     }
-
-
                     RadioButton rabt;
-
                         rabt = (RadioButton) classaddcontainer.getChildAt(checkedId);
-
-
                     Log.d("@@","class"+rabt.getText().toString());
                     class_num1 = get_class_num(rabt.getText().toString());
                     Log.d("@@","class"+class_num1);
@@ -159,6 +153,8 @@ public class ParentLookUpWork extends AppCompatActivity{
         });
         System.out.println("-----------------------------------------------");
     }
+
+    /*         ----------------------------------------------------日期类  下方  -------------------------------------*/
     /*更改日期*/
     private void alterDate() {
         SimpleDateFormat sDateFormat = new SimpleDateFormat("yyyy年MM月dd日");
@@ -210,14 +206,9 @@ public class ParentLookUpWork extends AppCompatActivity{
     }
     /*初始化控件*/
     private void Init_view() {
-
-
-
         homework = new HomeWork();
         classaddcontainer = (RadioGroup) findViewById(R.id.classaddcontainer1);
-
       /*  classaddcontainer.setOnCheckedChangeListener(this);  //  匿名内部类实现点击事件*/
-
         btn_submit = (Button) findViewById(R.id.btn_check);
         back_in_mywork = (ImageView) findViewById(R.id.back_in_mywork1);
         datatime = (TextView) findViewById(R.id.datatime1);
@@ -261,7 +252,9 @@ public class ParentLookUpWork extends AppCompatActivity{
                             for (int i = 0; i < ja.length(); i++) {
                                 JSONObject jo = (JSONObject) ja.get(i);
                                 String work_name = jo.getString("workname");
-                                value.add(work_name);
+                                String item = jo.getString("itemno");
+                                value.add(item+"."+work_name);
+                              /*  value.add(item);*/
                             }
                             Message msg = new Message();
                             msg.obj = value;
@@ -282,10 +275,6 @@ public class ParentLookUpWork extends AppCompatActivity{
                 }
             }).start();
         }
-
-
-
-
     }
 
     private void handleMsg() {

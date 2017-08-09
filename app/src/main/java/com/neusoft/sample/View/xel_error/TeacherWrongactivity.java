@@ -97,9 +97,11 @@ public class TeacherWrongactivity extends BaseActivity {
                     Comparator<TeacherWrong_Entity.DataBean>  comparator=new Comparator<TeacherWrong_Entity.DataBean>() {
                         @Override
                         public int compare(TeacherWrong_Entity.DataBean lhs, TeacherWrong_Entity.DataBean rhs) {
-                            int lhsnub= Integer.parseInt(lhs.getExamination_number().substring(8));
-                            int rhsnub= Integer.parseInt(rhs.getExamination_number().substring(8));
-                            return lhsnub-rhsnub;
+//                            int lhsnub= Integer.parseInt(lhs.getExamination_number().substring(8));
+//                            int rhsnub= Integer.parseInt(rhs.getExamination_number().substring(8));
+                            int lhsnub= Integer.parseInt(lhs.getCount());
+                            int rhsnub= Integer.parseInt(rhs.getCount());
+                            return rhsnub-lhsnub;
                         }
                     };
                     Collections.sort(dataBeanList,comparator);

@@ -5,6 +5,7 @@ import android.graphics.Bitmap;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -82,6 +83,11 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
     HashMap<String, String> map;//向服务器请求听写答案的map
     String urll;//请求听写答案的接口
     Boolean succ=false;//判断是否请求成功听写答案
+    //听写权限
+    private Handler handlerpower;
+    private Thread threadpower;
+    private String powersingle;
+
     @Override
     protected void onCreate( Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,12 +96,62 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
         //初始化播放音频的  工具类
         application = (App) getApplication();
         mService = application.getmService();
+        loadPowerByListen();
         initView();
         IN_accept();
         allbtn_defaultColor();
         setListener();
 
     }
+
+    private void loadPowerByListen() {
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                get_tingxie get_tingxie = new get_tingxie();
+                HashMap hashMap = new HashMap();
+                hashMap.put("user_id", App.newInstance().GetSharePrefrence_kejiezu(xel_course_chinese_textbooklearn.this));
+                try {
+                    Log.d("@@", "user_id" +  App.newInstance().GetSharePrefrence_kejiezu(xel_course_chinese_textbooklearn.this));
+                    String responsee = Post_learn_rijiyuelei.getStringCha(Constant.findpower, hashMap);
+                    Log.d("@@", "respose" + responsee);
+                    JSONObject jsonObjec = null;
+                    jsonObjec = new JSONObject(responsee);
+                    String power = null;
+                    power = jsonObjec.getString("data");
+
+                    Message message=new Message();
+                    Bundle bundle=new Bundle();
+                    bundle.putString("power",power);
+                    message.setData(bundle);
+                    handlerpower.sendMessage(message);
+                } catch (IOException e) {
+                    Log.d("@@","catch1"+e);
+                    e.printStackTrace();
+                } catch (JSONException e) {
+                    Log.d("@@","catch2");
+                    e.printStackTrace();
+                }
+            }
+
+
+
+        };
+        threadpower=new Thread(runnable);
+        threadpower.start();
+        handlerpower=new Handler(){
+            @Override
+            public void handleMessage(Message msg) {
+                super.handleMessage(msg);
+                powersingle=msg.getData().getString("power");
+
+                System.out.println("@@@p"+powersingle);
+
+            }
+        };
+    }
+
+
     /////////////////////////////////接受穿过来的  教材ID////////////////////////
     private void IN_accept() {
         Intent accept_mum = getIntent();
@@ -186,6 +242,7 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
         allbtn_defaultColor();
         //定义按钮点今后的颜色
         Drawable drawable_check= ContextCompat.getDrawable(this, R.drawable.red_btn_textbooklearn_change);
+
         switch (v.getId()){
             case R.id.read_chi:
                 list_tingxie.setVisibility(View.GONE);
@@ -238,7 +295,6 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
                         handler.post(updateThread);
                     }
                 }).start();
-                get_tingxie.get_power(xel_course_chinese_textbooklearn.this);
                 map.put("No",teach_num7+"0");//向map  赋值
                 urll = Constant.post_chinese_shengzi;//赋值请求生子听写答案接口路径
                 Init_post_tingxie();//向后台请求听写答案
@@ -258,7 +314,6 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
                         handler.post(updateThread);  
                     }
                 }).start();
-                get_tingxie.get_power(xel_course_chinese_textbooklearn.this);
                 map.put("No",teach_num7+"1");//向map  赋值
                 urll = Constant.post_chinese_shengzi;//赋值请求生子听写答案接口路径
                 Init_post_tingxie();//向后台请求听写答案
@@ -278,7 +333,6 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
                         handler.post(updateThread);
                     }
                 }).start();
-                get_tingxie.get_power(xel_course_chinese_textbooklearn.this);
                 map .put("No",teach_num7+"0");//向map  赋值
                 urll = Constant.post_chinese_cizu;//赋值请求词组听写答案接口路径
                 Init_post_tingxie();//向后台请求听写答案     
@@ -300,8 +354,7 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
                 }).start();
                 map .put("No",teach_num7+"1");//向map  赋值
                 urll = Constant.post_chinese_cizu;//赋值请求词组听写答案接口路径
-                get_tingxie.get_power(xel_course_chinese_textbooklearn.this);
-                Init_post_tingxie();//向后台请求听写答案    
+                Init_post_tingxie();//向后台请求听写答案
                 break;
             case R.id.zi_learn___:
                 handler.removeCallbacks(updateThread);
@@ -380,10 +433,11 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
      };
     /*更新听写页面的   view*/
     private void Ini_update_tingxieview() {
+
         if(succ) {
             succ = false;
-            Log.d("听写的a内容",get_tingxie.a+" -");
-            if (!("1".equals((get_tingxie.a)))) {
+            System.out.println("@@@"+powersingle);
+            if ("0".equals(powersingle)) {
                 Log.d("@@", " 播放完毕");
                 List<TingXieAnswer_item> list_item = new ArrayList<>();
                 Collections.sort(tingxie);
@@ -393,10 +447,12 @@ public class xel_course_chinese_textbooklearn extends BaseActivity implements Vi
                     String[] bb = tingxie.get(i).get_tingxie();
                     list_item.add(new TingXieAnswer_item(bb));
                 }
-                list_tingxie.setAdapter(new TingxieAdapter(this, list_item));
+                list_tingxie.setAdapter(new TingxieAdapter(xel_course_chinese_textbooklearn.this, list_item));
             } else {
                 Toast.makeText(xel_course_chinese_textbooklearn.this, "当前答案不允许查看", Toast.LENGTH_SHORT).show();
             }
+
+
         }
     }
     private void setListener() {

@@ -143,6 +143,8 @@ public class MyWorkActivity extends AppCompatActivity {
                                 }
                             }
                         }).start();
+                        strings.clear();
+
                         Toast.makeText(MyWorkActivity.this, "提交成功", Toast.LENGTH_SHORT).show();
                     }
                 }

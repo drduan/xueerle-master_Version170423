@@ -55,9 +55,9 @@ public class Db_UserService {
      * @return
      */
 
-//    public List<User> queryNote(String where, String... params){
-//        return userDao.queryRaw(where, params);
-//    }
+    public List<User> queryNote(String where, String... params){
+        return userDao.queryRaw(where, params);
+    }
 
 
     /**

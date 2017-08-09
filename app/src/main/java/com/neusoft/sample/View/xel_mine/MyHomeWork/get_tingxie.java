@@ -35,7 +35,7 @@ public class get_tingxie {
     public void setPower(String power) {
         this.power = power;
     }
-    public static String get_power(final Context context) {
+    public static Handler get_power(final Context context) {
 
 
         final Thread thread;
@@ -77,10 +77,9 @@ public class get_tingxie {
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 powersi=msg.getData().getString("power");
-                thread.interrupt();
             }
         };
         System.out.println("powerapowera"+powersi);
-        return  powersi;
+        return  handler_power;
     }
 }
