@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rankList_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rankList_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary">
+
+        <ImageButton
+            android:id="@+id/rankList_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="优秀作文赏析"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:paddingBottom="5dp"
+        tools:context="com.neusoft.sample.View.xel_mine.Xel_mine_feedback">
+
+        <LinearLayout
+            style="@style/rankList_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+
+                android:id="@+id/rankList_Title"
+                android:text="优秀作文赏析"
+                android:ems="10"
+                android:textColor="#ea2b2b2b"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="2"
+                android:ellipsize="marquee"
+                android:textStyle="bold"
+                android:visibility="gone"
+                />
+            <!-- <view android:id="view1"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="#000000"/>-->
+            <LinearLayout
+                android:id="@+id/rankListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                android:orientation="vertical">
+                <ListView xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/youxiuzuowenshangxi_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:dividerHeight="0dp"
+                    android:fastScrollEnabled="true"
+                    tools:listitem="@layout/xel_mine_ranklist_item">
+
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

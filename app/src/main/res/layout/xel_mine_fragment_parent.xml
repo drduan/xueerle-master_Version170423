@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:imagecontrol="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mine_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fitsSystemWindows="true"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/userInfo_tag"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:background="@drawable/xel_mine_head_bg"
+                        android:fitsSystemWindows="true"
+                        android:orientation="vertical"
+                        android:weightSum="2">
+
+                        <LinearLayout
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.7"
+                            android:padding="10dp">
+
+                            <com.neusoft.sample.Ctrl.wenchengcheng.RoundImageView
+                                android:id="@+id/userInfo_tag_Icon"
+                                android:layout_width="120dp"
+                                android:layout_height="120dp"
+                                imagecontrol:border_inside_color="#fff7f2e9"
+                                imagecontrol:border_outside_color="#ffd5d1c8"
+                                imagecontrol:border_thickness="2dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="0.175"
+                            android:gravity="center"
+                            android:layout_height="30dp">
+                            <TextView
+                                android:id="@+id/info_phone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+
+                                android:gravity="top"
+                                android:singleLine="true"
+                                android:textAlignment="center"
+                                android:textColor="#3d3d3d"
+                                android:textSize="23sp"
+                                android:textStyle="bold"
+                                android:typeface="monospace" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:textAlignment="center"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:background="#79d8e7"
+                                android:text="家长"/>
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/info_motto"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom"
+                            android:layout_weight="0.125"
+                            android:background="#4b4d4d4d"
+                            android:gravity="center"
+                            android:singleLine="true"
+                            android:text="这里放简介"
+                            android:textAlignment="center"
+                            android:textSize="17sp"
+                            android:textStyle="bold"
+                            android:typeface="monospace" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_weight="1"
+                        android:background="#ffffff"
+                        android:orientation="horizontal"
+                        android:paddingBottom="2dp"
+                        android:paddingTop="2dp"
+                        android:weightSum="2.998">
+
+                        <LinearLayout
+                            android:id="@+id/lay_tongzhigonggao"
+                            style="@style/single_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.998"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="通知中心"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.001"
+                            android:background="#e5e5e5" />
+
+                        <LinearLayout
+                            android:id="@+id/lay_longhubang"
+                            style="@style/single_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.998"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="龙虎榜"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.002"
+                            android:background="#e5e5e5" />
+
+                        <LinearLayout
+                            android:id="@+id/lay_techangfudao"
+                            style="@style/single_layout"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.998"
+                            android:paddingBottom="6dp"
+                            android:paddingTop="6dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="特长辅导"
+                                android:textAlignment="center"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/info_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <!-- w我的作业-->
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/lay_xuexiguiji"
+                            style="@style/single_layout"
+                            android:layout_width="match_parent"
+                            android:paddingBottom="10dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="10dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_homework" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="我的作业"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/wrap_layout"
+                        android:visibility="gone">
+                        <!-- 上圆角-->
+                        <LinearLayout
+                            android:id="@+id/kecheng_goumai"
+                            style="@style/top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="课程购买"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                        <!-- 分割线 -->
+                        <View style="@style/bg_line" />
+                        <!-- 下圆角-->
+                        <LinearLayout
+                            android:id="@+id/dd"
+                            style="@style/bottom_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="特长辅导"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout style="@style/wrap_layout">
+                        <!-- 上圆角-->
+                        <LinearLayout
+                            android:id="@+id/lay_jiaoziyoufang"
+                            style="@style/top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_goodpassage" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="优秀作文赏析"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                        <!-- 分割线 -->
+                        <View style="@style/bg_line" />
+                        <!-- 下圆角-->
+                        <LinearLayout
+                            android:id="@+id/lay_haoshutuijian"
+                            style="@style/bottom_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_goodbook" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="好书推荐(家长版)"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                        <!-- 分割线 -->
+                        <View style="@style/bg_line" />
+                        <!-- 下圆角-->
+                        <LinearLayout
+                            android:id="@+id/duhougan"
+                            style="@style/bottom_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_afterread" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="读后感"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout style="@style/wrap_layout">
+                        <!-- 上圆角-->
+                        <LinearLayout
+                            android:id="@+id/lay_bibeigushicimulu"
+                            style="@style/top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_poem" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="必背古诗词目录"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                        <!-- 分割线 -->
+                        <View style="@style/bg_line" />
+
+                        <!-- 上圆角-->
+                        <LinearLayout
+
+                            style="@style/top_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_poem" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="权限"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ToggleButton
+                                android:id="@+id/on_off_button"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textOff="已关"
+                                android:textOn="已开" />
+                        </LinearLayout>
+                        <!-- 分割线 -->
+                        <View style="@style/bg_line" />
+
+                        <!-- 下圆角-->
+                        <LinearLayout
+                            android:id="@+id/tuozhangushicimulu"
+                            style="@style/bottom_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_poem_extend" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="拓展古诗词目录"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/lay_gerenshezhi"
+                            style="@style/single_layout"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_setting" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="个人设置"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/xel_learnTrack"
+                            style="@style/single_layout"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_setting" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="学习轨迹"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <!-- 全圆角-->
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/feedback_tag"
+                            style="@style/single_layout"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_feedback" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="帮助与反馈"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/update_pkgVer"
+                            style="@style/single_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/xel_mine_checkupdate" />
+
+                            <TextView
+                                android:id="@+id/update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="检测更新"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/pkg_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="23dp"
+                                android:paddingRight="5dp"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout style="@style/wrap_layout">
+
+                        <LinearLayout
+                            android:id="@+id/exit"
+                            style="@style/single_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="8dp"
+                                android:src="@drawable/power_48px" />
+
+                            <TextView
+                                android:id="@+id/poweroff"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="退出"
+                                android:textColor="@color/text_clo"
+                                android:textSize="16dp" />
+
+                            <ImageView
+                                style="@style/img_arrow"
+                                android:layout_marginRight="2dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>

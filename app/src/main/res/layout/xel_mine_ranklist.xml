@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rankList_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rankList_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/rankList_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="龙虎榜"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:weightSum="1"
+        tools:context="com.neusoft.sample.View.xel_mine.Xel_mine_feedback">
+
+        <LinearLayout
+            style="@style/rankList_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/rankList_Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:ellipsize="marquee"
+                android:ems="10"
+                android:marqueeRepeatLimit="2"
+                android:singleLine="true"
+                android:text="大庆市一年级排行榜"
+                android:textAlignment="center"
+                android:textColor="#ea2b2b2b"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+            <!-- <view android:id="view1"
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="#000000"/>-->
+            <LinearLayout
+                android:id="@+id/rankListLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:descendantFocusability="blocksDescendants"
+                android:focusable="false"
+                android:orientation="vertical">
+
+                <ListView xmlns:tools="http://schemas.android.com/tools"
+                    android:id="@+id/rankList_ListView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:dividerHeight="0dp"
+                    android:fastScrollEnabled="true"
+                    tools:listitem="@layout/xel_mine_ranklist_item">
+
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

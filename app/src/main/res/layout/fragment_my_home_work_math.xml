@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.neusoft.sample.View.xel_mine.MyHomeWork.MyHomeWork$PlaceholderFragment">
+    <TextView
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal"
+        android:text=""
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+        android:elevation="8dp"
+        android:translationZ="4dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textSize="20sp"
+        android:id="@+id/time_work"
+        android:background="@color/colorPrimary"
+        android:textColor="#000"
+        android:layout_height="wrap_content"
+        />
+    <ListView
+        android:layout_width="fill_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:id="@+id/homework_list_math"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:nestedScrollingEnabled="false"></ListView>
+
+</LinearLayout>

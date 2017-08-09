@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/student_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99d5d5d5"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/student_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/student_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/student_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="个人信息"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/background"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/wrap_layout">
+
+                    <LinearLayout
+                        android:id="@+id/stu_userIcon_tag"
+                        style="@style/top_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="头像"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <com.neusoft.sample.Ctrl.wenchengcheng.RoundImageView
+                            android:id="@+id/stu_img_userIcon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/mylose" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:src="@drawable/left_arrow" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_motto_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="个性签名"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_motto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="宝剑锋从磨砺出，梅花香自苦寒来。"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_userID_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="用户名"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_userID"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <View style="@style/bg_line" />
+<!--recipient_tag-->
+                    <LinearLayout
+                        android:id="@+id/stu_recipient_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="昵称"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_recipient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_gender_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="性别"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_QQID_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="QQ"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_qqNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="84526789"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_mail_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="邮箱"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_mailUrl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="xelProject@xel.cn"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_weinxinID_tag"
+                        style="@style/bottom_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="微信号"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_weixinNum"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="wangxiaoer"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <LinearLayout style="@style/wrap_layout">
+
+                    <LinearLayout
+                        android:id="@+id/nichenghuanshangmianqule"
+                        style="@style/top_layout"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="收货人"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/zhegehuanshangmianqule"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="王大明"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_addressDetail_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="详细地址"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text="黑龙江省大庆市萨尔图区大连路66号"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_phoneNum_tag"
+                        style="@style/mid_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="手机号码"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_phone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+
+                    <View style="@style/bg_line" />
+
+                    <LinearLayout
+                        android:id="@+id/stu_zipCode_tag"
+                        style="@style/bottom_layout">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:text="邮政编码"
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/stu_tv_zipcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="1"
+                            android:drawableRight="@drawable/left_arrow"
+                            android:gravity="end"
+                            android:text=""
+                            android:textColor="#333"
+                            android:textSize="16dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner1">
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+        <item>第3章加减法一（39）</item>
+    </string-array>
+    <string-array name="listview">
+        <item>1.北师大小学一年级上册——口算题卡</item>
+        <item>2.北师大小学一年级上册——奥赛</item>
+        <item>3.初级.中.高级</item>
+        <item>4.苏教小学语文一年级上册——课本学习.成语接龙</item>
+        <item>5.日积月累《1——3年级》</item>
+        <item>6.小学生必背古诗词75首</item>
+        <item>7.课外精选古诗词40首</item>
+        <item>8.国学经典《弟子规》</item>
+        <item>9.毛泽东诗词精选16首</item>
+        <item>10.外交版小学生英语——一年级上册</item>
+        <item>11.新概念英语——第一册</item>
+    </string-array>
+    <string-array name="spinner2">
+        <item>第1章 介词（39）</item>
+        <item>第2章 动词（39）</item>
+
+    </string-array>
+    <string-array name="spinner3">
+        <item>第2组</item>
+        <item>第3组</item>
+
+    </string-array>
+    <string-array name="spinner4">
+        <item>Listen 1《Excuese me》</item>
+        <item>Listen 1《Excuese me》</item>
+
+    </string-array>
+    <string-array name="spinner5">
+        <item>当前无错题 </item>
+
+
+    </string-array>
+    <string-array name="spinner6">
+        <item>四宫 </item>
+        <item>第2章 </item>
+
+    </string-array>
+    <string-array name="spinner7">
+        <item>初级 </item>
+        <item>第2章 </item>
+
+    </string-array>
+    <string-array name="spinner8">
+        <item>第2题 </item>
+        <item>第3章题</item>
+
+    </string-array>
+    <string-array name="spinner10">
+        <item>第3章 1-3年级 第一周</item>
+        <item>第3章 1-3年级 第一周（39）</item>
+        <item>第3章 1-3年级 第一周（39）</item>
+
+    </string-array>
+    <string-array name="spinner11">
+        <item>第一节 历史</item>
+        <item>第一节 历史</item>
+        <item>第一节 历史</item>
+
+    </string-array>
+    <string-array name="spinner12">
+        <item>泌园春 长沙</item>
+        <item>泌园春 长沙</item>
+        <item>泌园春 长沙</item>
+
+    </string-array>
+    <string-array name="spinner13">
+        <item>第一章 《老子》 何为道 </item>
+        <item>泌园春 长沙</item>
+        <item>泌园春 长沙</item>
+
+    </string-array>
+    <string-array name="spinner14">
+        <item>Moudele(1)</item>
+        <item>Moudele(2)</item>
+        <item>Moudele(3)</item>
+
+    </string-array>
+    <string-array name="spinner15">
+        <item>Group(1)</item>
+        <item>Group(2)</item>
+        <item>Group(3)</item>
+
+    </string-array>
+    <string-array name="spinner16">
+        <item>Vnit(1)</item>
+        <item>Vnit(2)</item>
+        <item>Vnit(3)</item>
+
+    </string-array>
+    <string-array name="spinner17">
+        <item>第一课</item>
+        <item>第二课</item>
+        <item>第三课</item>
+
+    </string-array>
+    <string-array name="spinner18">
+        <item>生字听写</item>
+        <item>慢速</item>
+        <item>中速</item>
+
+    </string-array>
+
+    <string-array name="spinner19">
+        <item>词组听写</item>
+        <item>慢速</item>
+        <item>中速</item>
+
+    </string-array>
+</resources>

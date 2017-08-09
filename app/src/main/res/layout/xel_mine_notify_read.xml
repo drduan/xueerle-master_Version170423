@@ -1,0 +1,31 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/read_notify_layout">
+
+    <LinearLayout
+        android:id="@+id/read_notify_Line"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99d5d5d5"
+        android:orientation="vertical">
+        <ListView android:id="@+id/read_notify_listview"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+        </ListView>
+        <TextView android:id="@+id/read_notify_noList"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="还没有已读的通知"/>
+    </LinearLayout>
+</RelativeLayout>
+

@@ -1,0 +1,281 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rankList_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99d5d5d5"
+    android:descendantFocusability="beforeDescendants"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/rankList_back_idom_bianxi"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+        <TextView
+            android:id="@+id/feedback_title"
+            android:singleLine="true"
+            android:text="辨析"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        android:weightSum="1"
+        tools:context="com.neusoft.sample.View.xel_mine.Xel_mine_feedback">
+        <!-- 下面是主界面-->
+        <LinearLayout
+            style="@style/rankList_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!-- 第一行前所未有 史无前例-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/kstktitle_idom_bianxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center_horizontal|center"
+                    android:text="前所未有 史无前例 "
+                    android:textAlignment="center"
+                    android:textColor="#ff000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!-- 1234-->
+
+            <!--例句  和 辨析的内容-->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:horizontalSpacing="5dp"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="【辨析】"
+                            android:textColor="#ff0000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/yi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="① 这是第1行的内容"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/ersansi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="② 这是第2行的内容"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/sansi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="③ 这是第3行的内容"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/si"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:text="④ 这是第4行的内容"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+                    <!-- 例句1，例句2，例句3-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="【例句】"
+                            android:textColor="#ff0000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:id="@+id/liju1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="5dp"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:text="①"
+                                android:textAlignment="center"
+                                android:textColor="#ff000000"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/lijuyineirong"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:text="例句的内容"
+                                android:textColor="#ff000000"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/lijuer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:horizontalSpacing="5dp"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="②"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/lijuerneirong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="例句的内容"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lijusan"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:horizontalSpacing="5dp"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="③"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/lijusanneirong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="例句的内容"
+                                    android:textAlignment="center"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lijusi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:horizontalSpacing="5dp"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <TextView
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="④"
+                                    android:textAlignment="center"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:id="@+id/lijusineirong"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="15dp"
+                                    android:text="例句的内容"
+                                    android:textColor="#ff000000"
+                                    android:textSize="18sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

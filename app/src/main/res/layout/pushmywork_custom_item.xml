@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="1"
+        android:textSize="18sp"
+        android:id="@+id/indexname"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/content_push"
+        android:layout_width="0dp"
+        android:textSize="16sp"
+        android:layout_height="wrap_content"
+        android:hint="请输入作业信息"
+        android:layout_weight="1"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_push"
+        android:visibility="gone"
+        android:src="@drawable/editpushwork"
+        />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/delete_push"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:src="@drawable/deletepushwork"/>
+
+</LinearLayout>

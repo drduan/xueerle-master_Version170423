@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_xel_course_english_textbooklearn_wordlearn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/leftbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/eng_word_learn_navtitle"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/background"/>
+
+    <LinearLayout
+        android:layout_marginTop="3dp"
+        android:id="@+id/zhangjie"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:horizontalSpacing="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/eng_word_learn_zhangzu"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="moudle"
+            android:textColor="@color/black"
+            android:textSize="24sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/danci_line"></LinearLayout>
+    <LinearLayout
+        android:id="@+id/wordlist"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:horizontalSpacing="10dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:text="Word List:"
+            android:textColor="#ffff0000"
+            android:textSize="20sp" />
+        <Spinner
+            android:id="@+id/eng_spi"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:textSize="64sp"></Spinner>
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/background"
+        android:layout_below="@id/wordlist"/>
+    <RelativeLayout
+        android:id="@+id/zuo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/zhangjie">
+
+
+        <RelativeLayout
+
+            android:id="@+id/word"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@+id/left_1"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left" />
+
+            <LinearLayout
+                android:id="@+id/lay_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_word"
+                    android:layout_width="200.0dip"
+                    android:layout_height="50.0dip"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:textColor="#F00"
+                    android:textSize="36dip"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/lay_pinyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        >
+                        <TextView
+                            android:id="@+id/eng_word"
+                            android:gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:text="book"
+                            android:textColor="#000000"
+                            android:textSize="20.0sp" />
+                        <View
+                            android:layout_width="200dp"
+                            android:layout_height="2dp"
+                            android:background="@drawable/danci_line"/>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/eng_word_yin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:gravity="center_horizontal"
+                            android:text="[bʊk]"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat"
+                            android:textColor="#000000"
+                            android:textSize="20.0sp" />
+                        <ImageView
+                            android:gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:id="@+id/eng_word_voice"
+                            android:layout_width="24.0dip"
+                            android:layout_height="20.0dip"
+                            android:layout_marginLeft="20dp"
+                            android:src="@drawable/voice" />
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+
+                android:id="@+id/right_1"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/word">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/word"
+            android:layout_marginTop="10dp"
+            android:horizontalSpacing="1dp"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/danci_line"></LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="【课本释义】"
+                    android:textColor="#ffff0000"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="20dp">
+                    <TextView
+                        android:id="@+id/ke_cixing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text=" n."
+                        android:layout_marginRight="20dp"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/ke_ci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:layout_marginRight="10dp"
+                        android:text="书"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/ke_ciyi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="书"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/ke_liju"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="This is a red book"
+                    android:textColor="#ff05181d"
+                    android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/ke_liju_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="这是一本书！"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/ke_eng_tu"
+                    android:layout_gravity="center"
+                    android:visibility="visible"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eng_tuozhan"
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/danci_line"></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="【拓展词义】"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                    android:id="@+id/tuo_cixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="2dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="v."
+                    android:textColor="#ff05181d"
+                    android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tuo_ci"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="4dp"
+                        android:text="boode预定"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tuo_liju"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="He book a room for his friend."
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/tuo_liju_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:lineSpacingExtra="4dp"
+                        android:text="他为朋友订了一间房。"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="50dp"
+                    android:id="@+id/tuo_eng_tu"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:id="@+id/eng_wo">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/danci_line"
+                    android:orientation="vertical"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="【单词+ +】"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                   <TextView
+                       android:id="@+id/eng_wo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="2dp"
+                    android:text="booker登记人"
+                    android:textColor="#ff05181d"
+                    android:textSize="18sp"
+                       />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/eng_wo2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="2dp"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                  >
+                    <TextView
+                        android:id="@+id/eng_wo3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="2dp"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp"
+                       />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eng_duanyu"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/danci_line"
+                    android:orientation="horizontal"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="【词组学习】"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci_1_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci2_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci3_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci4_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci5_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci6_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/eng_ci7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="4dp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/eng_ci7_shi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingMultiplier="1.2"
+                        android:text=""
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                android:id="@+id/eng_jin">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/danci_line"
+                    android:orientation="vertical"></LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:lineSpacingExtra="4dp"
+                    android:text="【近义词】"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/eng_jin1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="2dp"
+                        android:text="booker登记人"
+                        android:textColor="#ff05181d"
+                        android:textSize="18sp"
+                        />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/jin"
+                    android:layout_marginLeft="20dp"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    style="@style/wrap_layout"
+                    android:textColor="@color/black"
+                    android:text="辨析"
+                    android:background="@drawable/boder"/>
+            </LinearLayout>
+        </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+</LinearLayout>

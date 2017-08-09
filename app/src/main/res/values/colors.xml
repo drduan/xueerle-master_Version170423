@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#fcde86</color>
+    <color name="colorPrimaryDark">#fcde86</color>
+    <color name="colorAccent">#ff4081</color>
+    <color name="green">#fcde86</color>
+    <color name="black">#050505</color>
+    <color name="write">#ffffff</color>
+    <color name="zi">#cccc</color>
+    <color name="back_white">#F5F5F5</color>
+    <color name="start_bg">#f7f7f7</color>
+    <color name="pull_refresh_textview">#2f2f2f</color>
+    <color name="gold">#000000</color>
+    <color name="viewpager_tab_main_bg">#fbfbfb</color>
+    <color name="viewpager_tab_bg_pressed">#fffe1f29</color>
+    <color name="viewpager_tab_bg_selected">#fffaf8f8</color>
+    <color name="viewpager_tab_text_normal">#ff909396</color>
+    <color name="viewpager_tab_text_selected">#fffd0202</color>
+    <color name="main_bg">#4586ef</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="spinnerred">#ff0f0949</color>
+
+    <color name="pink">#fc6e51</color>
+    <color name="yellow">#fc6e51</color>
+    <color name="transparent">#00000000</color>
+    <color name="background_color1">#100f0f</color>
+    <color name="ranklist_item_shape">#fcde86</color>
+    <color name="ranklist_item_shape_sel">#64fcde86</color>
+    <color name="home_line_bg">#ffdcdcdc</color>
+    <color name="gray">#EDEDED</color>
+    <color name="light_gray">#f7f7f7</color>
+    <color name="text_main">#2f2f2f</color>
+    <color name="text_main_top">#ece8e8</color>
+    <color name="text_gray">#818181</color>
+    <color name="listview_divider">#afafaf</color>
+    <color name="leftmenu_divider">#60a3cd</color>
+    <color name="leftmenu_listview_pressed">#33f7f7f7</color>
+    <color name="leftmenu_listview_normal">#11f7f7f7</color>
+    <color name="parent_dialog_bg">#EDEDED</color>
+    <color name="tab_text_selected">#fb0404</color>
+    <color name="tab_text_normal">#000000</color>
+    <!-- 本周日期颜色 -->
+    <color name="day_color">#000000</color>
+    <!-- 详细页 -->
+    <color name="news_detail_title">#1f1f1f</color>
+    <color name="news_detail_content">#585858</color>
+    <color name="daiinfo_blue">#6A5ACD</color>
+
+    <!-- weather -->
+    <color name="base_text_shadow">#4d000000</color>
+    <color name="weather_text">#ffedf0f3</color>
+    <!-- 用户设置 -->
+    <color name="Transparent">#00ffffff</color>
+    <color name="blue">#1086F4</color>
+    <color name="blue_light">#ffebebeb</color>
+    <!-- 通讯录 -->
+    <color name="contact_list_item_bg_pressed">#ffe5e5e5</color>
+    <color name="background">#e5e5e5</color>
+    <!-- 新闻页 -->
+    <color name="homepage_playview_bg">#65000000</color>
+    <color name="menu_normal">#3c3c3c</color>
+    <color name="menu_pressed">#7c7c7c</color>
+
+
+    <color name="top_bg">#00A0E9</color>
+
+    <color name="message_list_line">#e1e1e1</color>
+    <color name="grv_bg">#88f5f5f5</color>
+    <!-- 描边颜色 -->
+    <color name="border_clo">#ccc</color>
+    <color name="text_clo">#333</color>
+    <color name="huise">#808080</color>
+    <color name="zhuti">#fcde86</color>
+    <!--//数组游戏  点击后显示的额颜色s-->
+    <color name="game_background">#18924A</color>
+    <color name="puzzle_dark">#D19275</color>
+    <color name="puzzle_light">#B2DE90</color>
+    <color name="puzzle_hilite">#FF7F00</color>
+    <color name="puzzle_selected">#80000000</color>
+    <color name="line">#D8E3F5</color>
+
+    <!--我的退出弹窗-->
+    <color name="trans">#00000000</color>
+    <color name="alertdialog_line">#c6c6c6</color>
+    <color name="actionsheet_blue">#037bff</color>
+    <color name="actionsheet_red">#FD4A2E</color>
+    <color name="actionsheet_gray">#8F8F8F</color>
+
+</resources>
+

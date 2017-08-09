@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/xel_idom_bianxi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.neusoft.sample.View.xel_course.yangkangkang.xel_idom_bianxi">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/lay_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:onClick="break_1"
+            android:id="@+id/bainxi_leftbutton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/bianxi_idioma_navtitle"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:text="成语接龙"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <ProgressBar
+            android:id="@+id/pdf_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:visibility="gone" />
+        <com.github.barteksc.pdfviewer.PDFView
+            android:visibility="gone"
+            android:id="@+id/bianxi_pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/relative_top_title"
+        layout="@layout/top_title" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relative_top_title"
+        android:background="@color/background">
+
+        <RelativeLayout
+            android:id="@id/rl_hanzi"
+            android:layout_width="match_parent"
+            android:layout_height="200.0dip"
+            android:layout_below="@id/txt_pinyin"
+
+            android:background="@color/white">
+
+            <ImageView
+                android:id="@id/img_previous"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/left" />
+
+            <TextView
+                android:id="@+id/txt_hanzi"
+                android:layout_marginTop="10dp"
+                android:layout_width="200.0dip"
+                android:layout_height="200.0dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_word_bg"
+                android:orientation="horizontal"
+                android:textColor="@color/red"
+                android:textSize="190dip" />
+
+            <LinearLayout
+
+
+                android:id="@+id/lay_hanzi"
+                android:layout_width="200.0dip"
+                android:layout_height="200.0dip"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_word_bg"
+                android:orientation="horizontal">
+
+                <com.neusoft.sample.View.xel_course.miaohong.MiaoHongView
+                    android:id="@id/img_hanzi"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@id/img_next"
+                android:layout_width="50.0dip"
+                android:layout_height="50.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/right" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_marginTop="3dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:id="@id/linear_operation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_hanzi"
+
+            android:gravity="center"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <Button
+                android:id="@id/btn_show"
+                android:layout_width="100.0dip"
+                android:layout_height="42.0dip"
+                android:background="@drawable/border_top"
+                android:text="演示笔顺"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+            <Button
+                android:background="@drawable/border_top"
+                android:id="@id/btn_voice"
+                android:layout_width="100.0dip"
+                android:layout_height="42.0dip"
+                android:layout_marginLeft="30.0dip"
+
+                android:text="播放语音"
+                android:textColor="@color/black"
+                android:textSize="16.0sp" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/wv1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_below="@id/linear_operation"
+            android:paddingLeft="12.0dip"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/wv1"
+            android:layout_weight="1"
+            android:id="@+id/lin1"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:id="@+id/tv1"
+                android:text="1111"
+                android:background="@color/white"
+                android:textColor="@color/background_color1"
+                android:textSize="17sp"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@color/white"
+              >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv2"
+                    android:textColor="@color/background_color1"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="20dp"
+                    />
+            </RelativeLayout>
+           
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:layout_marginBottom="5dp"
+                android:background="@color/white">
+                <TextView
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv3"
+                    android:textColor="@color/background_color1"
+                    android:textSize="17sp"
+                    android:layout_marginRight="20dp"
+                   />
+            </RelativeLayout>
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="3dp"
+              android:background="@color/background"></View>
+          
+
+        </LinearLayout>
+        <GridView
+            android:id="@id/grv_hanzi"
+            android:layout_width="match_parent"
+            android:layout_height="120.0dip"
+            android:layout_above="@id/wv1"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:numColumns="5"
+            android:paddingLeft="12.0dip"
+            android:paddingRight="12.0dip"
+            android:verticalSpacing="10.0dip"/>
+
+        <TextView
+            android:id="@id/txt_pinyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25.0sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@id/pb_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

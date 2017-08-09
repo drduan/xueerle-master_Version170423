@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        style="@style/feedback_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <TextView
+            android:id="@+id/rank_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.2"
+            android:ellipsize="marquee"
+            android:ems="5"
+            android:marqueeRepeatLimit="2"
+            android:singleLine="true"
+            android:text="50"
+            android:textAlignment="center"
+            android:textColor="#ea2b2b2b"
+            android:textSize="15sp" />
+
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/name_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.2"
+            android:ellipsize="marquee"
+            android:ems="5"
+            android:marqueeRepeatLimit="2"
+            android:singleLine="true"
+            android:text="成吉思汗"
+            android:textAlignment="center"
+            android:textColor="#ea2b2b2b"
+            android:textSize="15sp" />
+
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/school_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.2"
+            android:ellipsize="marquee"
+            android:ems="5"
+            android:marqueeRepeatLimit="2"
+
+            android:singleLine="true"
+            android:text="机关一小"
+            android:textAlignment="center"
+            android:textColor="#ea2b2b2b"
+            android:textSize="15sp" />
+
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/grade_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.2"
+            android:ellipsize="marquee"
+            android:ems="5"
+            android:marqueeRepeatLimit="2"
+
+            android:singleLine="true"
+            android:text="一年二班"
+            android:textAlignment="center"
+            android:textColor="#ea2b2b2b"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/points_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="0.2"
+            android:ellipsize="marquee"
+            android:ems="5"
+            android:marqueeRepeatLimit="2"
+            android:singleLine="true"
+            android:text="140"
+            android:textAlignment="center"
+            android:textColor="#ea2b2b2b"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>
+

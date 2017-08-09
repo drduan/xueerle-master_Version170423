@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="#fff">
+    <com.neusoft.sample.View.AlwaysMarqueeTextView
+        android:id="@+id/learntrack_detail"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.85"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="2"
+        android:clickable="true"
+        android:textColor="#b4373737"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:paddingRight="0dp"
+        android:singleLine="true"
+        android:text="1.3月1日第1节第11组 对25题 错4题"/>
+    <TextView
+        android:id="@+id/learntrack_score"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.15"
+        android:textColor="#b4373737"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="80分"/>
+</LinearLayout>

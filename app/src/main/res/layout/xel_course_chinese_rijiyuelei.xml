@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    >
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/left_rijiyuelei"
+            android:onClick="break_1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/rijiyuelei_Navigation"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:text="古诗词"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/title_rijiyuelei"
+        android:layout_width="fill_parent"
+        android:text="第一节"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+       />
+    <ListView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/background"
+        android:layout_weight="1"
+        android:id="@+id/rijiyuelei_learn_listview"
+        android:dividerHeight="15px"
+        android:layout_marginTop="3dp"
+        />
+</LinearLayout>

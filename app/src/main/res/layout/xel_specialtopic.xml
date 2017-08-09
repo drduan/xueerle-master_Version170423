@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="310dp"
+                android:layout_height="50dp"
+
+                android:layout_gravity="center_horizontal|center_vertical"
+
+                android:gravity="center_horizontal|center_vertical|bottom"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/math"
+                        android:layout_width="103dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="0dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/main_view_math"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+                    <View
+                        android:id="@+id/math_line"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:background="#000" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/chinese"
+                        android:layout_width="103dp"
+                        android:layout_height="35dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/main_view_chinese"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+                    <View
+                        android:id="@+id/chinese_line"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:background="#000" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/english"
+                        android:layout_width="103dp"
+                        android:layout_height="35dp"
+                        android:layout_marginRight="0dp"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:text="@string/main_view_english"
+                        android:textColor="#000000"
+                        android:textSize="20dp" />
+                    <View
+                        android:id="@+id/english_line"
+                        android:layout_width="40dp"
+                        android:layout_height="2dp"
+                        android:layout_gravity="center"
+                        android:background="#000" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/background"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/xel_specialtopic_chinese_mainpage" />
+                <include layout="@layout/xel_specialtopic_english_mainpage" />
+                <include layout="@layout/xel_specialtopic_math_mainpage" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

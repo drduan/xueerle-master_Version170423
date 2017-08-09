@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rankList_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/rankList_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/learnTrack_detail_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:clickable="true"
+            android:background="@drawable/back" />
+
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/learnTrack_detail_maintitle"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="学习轨迹" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:weightSum="1"
+        tools:context="com.neusoft.sample.View.xel_mine.Xel_mine_feedback">
+
+        <LinearLayout
+            style="@style/rankList_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/learnTrack_ListView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:dividerHeight="0dp"
+                android:fastScrollEnabled="true"
+                tools:listitem="@layout/xel_mine_ranklist_item">
+
+            </ListView>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

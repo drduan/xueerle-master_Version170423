@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/zhuti"
+            >
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:background="@color/zhuti"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/background_color1"
+                android:text="《专题》 数学>奥赛>奥赛测试>第一章>第一节"
+                android:gravity="center_horizontal"
+
+                android:layout_marginLeft="10dp"
+                />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       android:background="@drawable/boder"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="测试题9:一位老爷爷说：“北京举办奥运会那一年，
+            我才过我第18个生日”你知道这位老爷爷是哪年哪月哪日出生的吗？"
+            android:textColor="@color/background_color1"
+            android:textSize="15sp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            style="@style/wrap_layout"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/buy_keben1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical"
+        >
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="解析："
+          android:layout_margin="30dp"
+          android:textSize="20sp"
+          android:textColor="@color/zhuti"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="这道题目和哪一年出生没有关系，果然是小学生智商捉鸡_(:з」∠)_
+爷爷说的是北京奥运会那一年也就是2008年。
+今年的话把2012换成2014,2014-2008=6 72+6=78 2014-78=1936 也是没有变化的。呵呵"/>
+        <ImageView
+            style="@style/wrap_layout"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/buy_keben1"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+
+        android:background="@drawable/boder"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/wrap_layout_btn"
+            android:text="上一题"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/wrap_layout_btn"
+            android:layout_marginLeft="70dp"
+            android:text="下一题"/>
+
+
+    </LinearLayout>
+</LinearLayout>

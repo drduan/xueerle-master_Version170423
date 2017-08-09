@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/feedback_layout"
+    android:background="#e5e5e5"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/student_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/feedback_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/feedback_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="帮助与反馈"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:scrollbars="vertical"
+        android:layout_weight="0.9"
+        >
+        <LinearLayout
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:orientation="vertical"
+            tools:context="com.neusoft.sample.View.xel_mine.Xel_mine_feedback"
+            android:weightSum="1">
+            <LinearLayout style="@style/feedback_layout"
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2">
+                <!-- 上圆角-->
+                <TextView
+                    android:id="@+id/helpText"
+                    android:text="帮助"
+                    android:textColor="#ea2b2b2b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" />
+                <View style="@style/bg_line" android:id="@+id/view"
+                    android:layout_marginTop="10dp" />
+                <!-- 下圆角-->
+                <TextView
+                    android:text="请您联系客服QQ:868466622"
+                    android:id="@+id/help_qq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="20sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+            <LinearLayout style="@style/feedback_layout"
+                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_weight="0.8">
+                <TextView
+                    android:id="@+id/feedbackText"
+                    android:text="反馈"
+                    android:textColor="#ea2b2b2b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp" />
+                <View style="@style/bg_line" android:id="@+id/view1"
+                    android:layout_marginTop="10dp" />
+                <EditText android:id="@+id/feedback_text"
+                    android:background="@drawable/edit_shape"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal|center"
+                    android:maxLength="180"
+                    android:hint="输入反馈的内容(20~180字)"
+                    />
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="10dp"
+                        android:gravity="center_horizontal">
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_gravity="center"
+                            android:layout_width="245dp"
+                            android:layout_height="75dp"
+                            android:choiceMode="singleChoice"
+                            android:divider="@null"
+                            android:fadingEdge="none"
+                            android:scrollbars="horizontal"
+                            android:listSelector="@android:color/transparent"
+                            android:scrollbarStyle="outsideOverlay"
+                            app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                            app:spanCount="1"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            tools:listitem="@layout/list_image_item"/>
+                    </LinearLayout>
+                    <Button
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:visibility="gone"
+                        android:background="@drawable/red_btn_textbooklearn"
+                        android:text="上传"
+                        android:textColor="#ffffff"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_margin="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:padding="5dp"
+                        />
+                </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout android:id="@+id/upload_feedback"
+                    style="@style/single_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:textColor="#ea2b2b2b"
+                        android:text="发送"
+                        android:textSize="20dp"/>
+                </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

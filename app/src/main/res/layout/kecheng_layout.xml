@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:orientation="vertical"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:horizontalSpacing="0dp"
+        android:orientation="horizontal"
+       >
+
+        <LinearLayout
+            android:layout_width="310dp"
+            android:layout_height="50dp"
+
+            android:layout_gravity="center_horizontal|center_vertical"
+
+            android:gravity="center_horizontal|center_vertical|bottom"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/math"
+                    android:layout_width="103dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="0dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/main_view_math"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="#000"
+                    android:id="@+id/math_line"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:id="@+id/chinese"
+                    android:layout_width="103dp"
+                    android:layout_height="35dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/main_view_chinese"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <View
+                    android:id="@+id/chinese_line"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/english"
+                    android:layout_width="103dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:text="@string/main_view_english"
+                    android:textColor="#000000"
+                    android:textSize="20dp" />
+
+                <View
+                    android:id="@+id/english_line"
+                    android:layout_width="40dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="#000" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/background"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/ScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- 数学-->
+                <LinearLayout
+                    android:id="@+id/lay_math"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="5dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                style="@style/subject_type_title_1"
+                                android:text="口算题卡"
+                                />
+
+                            <View
+                                style="@style/subject_type_title_line"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            style="@style/subject_type_spinner_layout">
+
+                            <Spinner
+                                android:id="@+id/ke_select"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/spinner_item"
+                                android:textSize="30sp" />
+                            <Spinner
+                                android:layout_marginTop="3dp"
+
+                                android:id="@+id/jie_select"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/spinner_item"
+                                android:textSize="30sp" />
+                            <Spinner
+                                android:layout_marginTop="3dp"
+                                android:id="@+id/zu_select"
+                                android:layout_width="fill_parent"
+                                android:layout_weight="1"
+                                android:layout_height="40dp"
+                                android:background="@drawable/spinner_item"
+                                android:textSize="30sp"
+                                />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="10dp"
+                                android:gravity="end">
+
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+                            <LinearLayout style="@style/start_btn"
+                                android:id="@+id/kousuan_go"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector"/>
+                            </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/boder"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:horizontalSpacing="5dp"
+                            android:layout_marginTop="5dp"
+                            android:orientation="horizontal"
+                           >
+
+                            <TextView
+                                android:id="@+id/aosaititle"
+                                android:layout_height="40dp"
+                                android:textAlignment="center"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:text="好题精解"
+                                android:textColor="#fF000000"
+                                android:textSize="18sp"
+                                android:layout_width="wrap_content" />
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="fill_parent"
+                            android:layout_height="4px"
+                            android:layout_marginTop="2dip"
+                            android:background="@color/gray" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="90dp"
+                            android:orientation="vertical"
+                            >
+                            <LinearLayout
+                                style="@style/subject_type_spinner_layout">
+                                <Spinner
+                                    android:id="@+id/haoti_zhang_select"
+                                    android:layout_width="200dp"
+                                    android:layout_height="25dp"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:background="@color/white"
+                                    android:textSize="30sp"
+                                />
+                            </LinearLayout>
+                            <LinearLayout
+                                style="@style/subject_type_spinner_layout">
+                                <Spinner
+                                    android:id="@+id/haoti_jie_select"
+                                    android:layout_width="200dp"
+                                    android:layout_height="25dp"
+                                    android:background="@color/white"
+                                    android:layout_marginLeft="20dp"
+                                    android:layout_marginRight="20dp"
+                                    android:textSize="30sp"
+                                    android:layout_weight="1"
+                                 />
+                                <LinearLayout style="@style/start_btn"
+                                    android:id="@+id/haoti_gos"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/start_icon_selector"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp" />
+                </LinearLayout>
+                <!--语文-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background"
+                    android:id="@+id/lay_chinese"
+
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="center"
+                        android:background="#fff"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/subject_type_title_1"
+                            android:text="课本学习"
+                            />
+                        <View
+                            style="@style/subject_type_title_line"/>
+
+                        <LinearLayout
+                            style="@style/subject_type_spinner_layout">
+
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/chinese_textbooklearn_spinner"
+
+                                android:background="@drawable/spinner_item"
+                                >
+
+                            </Spinner>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+                            <LinearLayout style="@style/start_btn"
+                                android:id="@+id/chinese_kebenxuexxi_go"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector"/>
+                            </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/background"
+                            android:layout_height="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView android:text="成语接龙"
+                            style="@style/subject_type_title_1" />
+                        <View style="@style/subject_type_title_line"/>
+
+                        <LinearLayout style="@style/subject_type_spinner_layout">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:id="@+id/Chinese_IdiomGame_spinner"
+                                android:background="@drawable/spinner_item"
+                                >
+
+                            </Spinner>
+
+
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+
+                            <LinearLayout style="@style/start_btn"
+                                android:id="@+id/chinese_chengyuxuexi_go"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector"/>
+                            </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/background"
+
+                            android:layout_height="5dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/boder"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textAlignment="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="资源评价"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            style="@style/subject_type_spinner_layout">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignLeft="@+id/chinese_ziyuanpingjia_go"
+                                android:background="@drawable/spinner_item"
+                                android:paddingBottom="0dp"
+                                >
+
+                            </Spinner>
+
+                            <LinearLayout style="@style/start_btn"
+                                android:id="@+id/chinese_ziyuanpingjia_go"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector"/>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <!--英语-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/background"
+                    android:id="@+id/lay_english"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <TextView
+                            style="@style/subject_type_title_1"
+                            android:text="课本学习"
+                           />
+                        <View style="@style/subject_type_title_line"/>
+
+                        <LinearLayout style="@style/subject_type_spinner_layout">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_alignParentLeft="true"
+                                android:background="@drawable/spinner_item"
+                                android:id="@+id/ke_learn_english_ke"
+
+                                >
+
+                            </Spinner>
+
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+
+                            <LinearLayout style="@style/start_btn"
+                                android:id="@+id/english_kebenxuexi_go"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector"/>
+                            </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/background"
+
+                            android:layout_height="5dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        >
+                        <TextView
+                            style="@style/subject_type_title_1"
+                            android:text="背单词"
+                             />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                style="@style/subject_type_spinner_layout">
+                                <Spinner
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+
+                                    android:background="@drawable/spinner_item"
+                                    android:id="@+id/English_Recitewords_ke"
+
+                                    >
+
+                                </Spinner>
+
+                            </RelativeLayout>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/background" />
+                        <LinearLayout style="@style/start_btn"
+                            android:id="@+id/english_beidanci_go"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/start_icon_selector"/>
+                        </LinearLayout>
+                        <View
+                            android:layout_width="match_parent"
+                            android:background="@color/background"
+
+                            android:layout_height="5dp" />
+
+                    </LinearLayout>
+                    <!--单词测试-->
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        android:gravity="center">
+                        <TextView
+
+                            android:text="背单词"
+                            style="@style/subject_type_title_1" />
+                        <View
+                            style="@style/subject_type_title_line"/>
+
+                        <LinearLayout
+                            style="@style/subject_type_spinner_layout">
+                            <Spinner
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:id="@+id/english_beidanciceshi_ke"
+                                android:background="@drawable/spinner_item"
+                                >
+                            </Spinner>
+                                <Spinner
+                                    android:background="@drawable/spinner_item"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="3dp"
+                                    android:id="@+id/english_beidanciceshi_jie"
+                                    android:visibility="gone"
+                                    >
+
+                                </Spinner>
+                                    <Spinner
+                                        android:background="@drawable/spinner_item"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_marginTop="3dp"
+                                        android:id="@+id/english_beidanciceshi_zu"
+                                        >
+                                    </Spinner>
+                        </LinearLayout>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/background" />
+                                <LinearLayout style="@style/start_btn"
+                                    android:id="@+id/english_beidanciceshi_go"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/start_icon_selector"/>
+                                </LinearLayout>
+
+                    </LinearLayout>
+                    <View
+                        android:layout_width="match_parent"
+                        android:background="@color/background"
+                        android:layout_height="5dp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp"
+                            android:textAlignment="center"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:text="资源评价"
+                            android:textColor="#ff000000"
+                            android:textSize="18sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <LinearLayout
+                                style="@style/subject_type_spinner_layout"
+                                android:layout_height="wrap_content">
+                                <Spinner
+                                    android:background="@drawable/spinner_item"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+
+                                />
+                            </LinearLayout>
+                                <LinearLayout style="@style/start_btn"
+                                    android:id="@+id/english_ziyuan_go"
+                                    android:orientation="horizontal">
+                                    <ImageView
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/start_icon_selector"/>
+                                </LinearLayout>
+
+                            <LinearLayout
+                                style="@style/subject_type_spinner_layout">
+                                <Spinner
+                                    android:background="@drawable/spinner_item"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:visibility="gone"/>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

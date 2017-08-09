@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:visibility="visible"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/zhuti">
+
+            <ImageButton
+                android:onClick="break_1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back" />
+            <com.neusoft.sample.View.AlwaysMarqueeTextView
+                android:id="@+id/chi_title"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:text="《课程》 语文>课本学习"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+       >
+        <TextView
+            android:layout_marginTop="3dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textSize="20sp"
+            android:text="第一课:人工有两个宝"
+            android:background="@color/white"
+
+            android:textColor="@color/background_color1"
+            android:id="@+id/tv_ke_chi"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/tv_curcentTime_chi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="00:00" />
+            <SeekBar
+                android:minHeight="10dp"
+                android:maxHeight="10dp"
+                android:progressDrawable="@drawable/seekbar_style"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:id="@+id/seekBar1_chi"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:progress="0"
+                android:secondaryProgress="0" />
+
+            <TextView
+                android:id="@+id/tv_allTime_chi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="00:00" />
+            <Button
+                android:id="@+id/stop_chi_btn"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="暂停"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:background="@color/write"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/read_chi"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="课文语音" />
+
+            <Button
+                android:id="@+id/zi_ting_man"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="生字听写慢速" />
+
+            <Button
+                android:id="@+id/zi_ting_zhong"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="生字听写中速"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/ci_ting_man"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="词组听写慢速"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/ci_ting_zhong"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="词组听写中速"
+                android:textSize="13dp" />
+
+            <Button
+                android:id="@+id/zi_learn___"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_btn_textbooklearn"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="生字学习"
+                android:textSize="13dp" />
+
+
+        </LinearLayout>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" 
+            android:id="@+id/chi_web_img"
+            android:layout_margin="3dp"/>
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:id="@+id/chi_web"
+            android:visibility="gone"
+            >
+        </WebView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chinese_tingxie"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="序号"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/background_color1"
+                android:id="@+id/ting1"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="生字"
+                android:gravity="center"
+                android:id="@+id/ting2"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="拼音"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:id="@+id/ting3"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="词组"
+                android:gravity="center"
+                android:id="@+id/ting4"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chinese_tingxie_cizu"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="序号"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/background_color1"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="词组"
+                android:gravity="center"
+              
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="拼音"
+                android:gravity="center"
+                android:textSize="18sp"
+               
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textSize="18sp"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chinesee_listview"
+            android:divider="@color/alertdialog_line"
+            android:dividerHeight="1dp"
+            ></ListView>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+

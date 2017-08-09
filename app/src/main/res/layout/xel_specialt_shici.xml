@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/zhuti">
+
+            <ImageButton
+                android:onClick="break_1"
+                android:id="@+id/left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back" />
+            <com.neusoft.sample.View.AlwaysMarqueeTextView
+                android:id="@+id/shici_Navigation"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+        </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical"
+                android:gravity="center">
+            <com.neusoft.sample.Model.mygridview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/gv_title_shi"
+                android:visibility="gone"
+                />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/title_word"
+                    android:textColor="@color/background_color1"
+                    android:textSize="22sp"
+                    android:textAppearance="@style/TextAppearance.FontPathView"
+                    android:layout_marginTop="15dp"
+                    android:text="你好"/>
+
+            </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="毛泽东"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/background_color1"
+            android:id="@+id/shici_autor"
+            android:textAppearance="@style/TextAppearance.FontPathView"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            />
+        <ImageView
+            android:id="@+id/shi_voice"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/voice"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="20dp"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/boder"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/zhuti"
+            android:text="      "
+            android:layout_marginLeft="10dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.neusoft.sample.Model.mygridview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:id="@+id/shici_listview"
+                android:divider="#00000000"
+                android:dividerHeight="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                >
+            </com.neusoft.sample.Model.mygridview>
+        </ScrollView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical"
+        android:id="@+id/lin_jiexi"
+        
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/zhuti"
+                android:text="解析:"
+                android:layout_marginLeft="10dp"/>
+            <ImageView
+                android:id="@+id/shi_voice_shangxi"
+                android:layout_width="18.0dip"
+                android:layout_height="18.0dip"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/voice"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scro_shi"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginRight="10dp"
+                    android:id="@+id/shici_shangxi"
+                    android:textSize="16sp"
+                    /> 
+            </LinearLayout>
+           
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

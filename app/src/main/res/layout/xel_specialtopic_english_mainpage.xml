@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zhuanti_english"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/subject_type_title_1"
+                android:layout_gravity="center"
+                android:text="英语语法" />
+
+            <View style="@style/subject_type_title_line" />
+
+            <LinearLayout style="@style/subject_type_spinner_layout">
+
+                <Spinner
+                    android:id="@+id/yufa_spinner_ke"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/spinner_item"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:id="@+id/english_yufa_learn"
+                style="@style/start_btn"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/start_icon_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+
+                android:background="@color/background" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <TextView
+                style="@style/subject_type_title_1"
+                android:layout_gravity="center"
+                android:text="英语语法测试" />
+
+            <View style="@style/subject_type_title_line" />
+
+            <LinearLayout style="@style/subject_type_spinner_layout">
+
+                <Spinner
+                    android:id="@+id/yufacesi_spinner_ke"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:background="@drawable/spinner_item"/>
+
+                <Spinner
+                    android:id="@+id/yufacesi_spinner_zu"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/spinner_item"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:id="@+id/english_yufatest"
+                style="@style/start_btn"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/start_icon_selector" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+
+                android:background="@color/background" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/xinggainian_visibility"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/subject_type_title_1"
+                    android:layout_gravity="center"
+                    android:text="新概念课本学习" />
+
+                <View style="@style/subject_type_title_line" />
+
+                <LinearLayout style="@style/subject_type_spinner_layout">
+
+                    <Spinner
+                        android:id="@+id/spinner_xingainian"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/spinner_item"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/background" />
+
+                <LinearLayout
+                    android:id="@+id/img_eng_btn_spe"
+                    style="@style/start_btn"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/start_icon_selector" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+
+                    android:background="@color/background" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            style="@style/subject_type_title_1"
+            android:layout_gravity="center"
+            android:text="新概念背单词" />
+
+        <View style="@style/subject_type_title_line" />
+
+        <LinearLayout style="@style/subject_type_spinner_layout">
+
+            <Spinner
+                android:id="@+id/xingainian_test_ke"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/spinner_item"/>
+
+            <Spinner
+                android:id="@+id/xingainian_test_jie"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/spinner_item"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/background" />
+
+        <LinearLayout
+            android:id="@+id/xingainian_test_btn_go"
+            style="@style/start_btn"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/start_icon_selector" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+
+            android:background="@color/background" />
+    </LinearLayout>
+</LinearLayout>
+

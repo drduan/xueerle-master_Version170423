@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:orientation="vertical">
+    <LinearLayout android:id="@+id/rankListItem"
+        android:clickable="true"
+        android:focusable="false"
+        style="@style/wrap_layout">
+
+        <LinearLayout
+            style="@style/single_layout"
+            android:id="@+id/lay_tongzhigonggao"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent">
+
+            <com.neusoft.sample.View.AlwaysMarqueeTextView
+                android:layout_width="wrap_content"
+                android:layout_height="22dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:ems="8"
+                android:text=""
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="2"
+                android:textColor="@color/text_clo"
+                android:textSize="18sp"
+                android:id="@+id/textView3"/>
+
+            <ImageView style="@style/img_arrow" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

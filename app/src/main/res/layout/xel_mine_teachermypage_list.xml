@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:orientation="horizontal"
+    android:background="#fff">
+    <com.neusoft.sample.View.AlwaysMarqueeTextView
+        android:id="@+id/class_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="2"
+        android:clickable="true"
+        android:textColor="#b4373737"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        android:gravity="center_vertical|right"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+        android:text="三年三班"/>
+</LinearLayout>

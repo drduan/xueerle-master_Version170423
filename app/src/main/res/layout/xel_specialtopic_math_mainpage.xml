@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/zhuanti_math"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/subject_type_title_1"
+                        android:layout_gravity="center"
+                        android:text="奥赛学习"
+                        />
+
+                    <View
+                        style="@style/subject_type_title_line"/>
+                        <LinearLayout
+                            style="@style/subject_type_spinner_layout">
+
+                            <Spinner
+                                android:id="@+id/aosai_study_ke"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:background="@drawable/spinner_item" />
+
+                            <Spinner
+                                android:id="@+id/aosai_study_jie"
+                                android:layout_width="fill_parent"
+                                android:layout_height="40dp"
+                                android:layout_marginTop="3dp"
+                                android:background="@drawable/spinner_item" />
+                        </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background" />
+
+                    <LinearLayout
+                        android:id="@+id/specialtopic_math_aosai_xuexi"
+                        style="@style/start_btn"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/start_icon_selector" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:background="@color/background" />
+
+
+                    <TextView
+                        style="@style/subject_type_title_1"
+                        android:layout_gravity="center"
+                        android:text="奥赛测试"
+                      />
+
+                    <View
+                        style="@style/subject_type_title_line" />
+
+                            <LinearLayout
+                                style="@style/subject_type_spinner_layout">
+
+                                <Spinner
+                                    android:id="@+id/math_aosaiceshi_ke"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:background="@drawable/spinner_item" />
+
+                                <Spinner
+                                    android:id="@+id/math_aosaiceshi_jie"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/spinner_item" />
+
+                                <Spinner
+                                    android:id="@+id/math_aosaiceshi_zu"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_marginTop="3dp"
+                                    android:background="@drawable/spinner_item"/>
+                            </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/background" />
+
+                    <LinearLayout
+                        android:id="@+id/specialtopic_math_aosai_ceshi"
+                        style="@style/start_btn"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/start_icon_selector" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+
+                        android:background="@color/background" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/boder"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/subject_type_title_1"
+                        android:text="数独学习"
+                         />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#000" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical">
+
+                        <Spinner
+                            android:id="@+id/shudu_study_ke"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:background="@color/white">
+
+                        </Spinner>
+
+                        <Spinner
+                            android:id="@+id/shudu_study_jie"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="20dp"
+                            android:background="@color/white">
+
+                        </Spinner>
+
+                        <LinearLayout
+                            android:id="@+id/ima_shudu_learn"
+                            style="@style/start_btn"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/start_icon_selector" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="15dp"
+                        android:text="数独测试"
+                        android:textAlignment="center"
+                        android:textColor="@color/background_color1"
+                        android:textSize="25sp" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#000" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/speci_math_shudu_test_1"
+                            android:layout_width="200dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white" />
+
+                        <Spinner
+                            android:id="@+id/speci_math_shudu_test_2"
+                            android:layout_width="200dp"
+                            android:layout_height="25dp"
+                            android:layout_marginBottom="10dp"
+                            android:background="@color/white" />
+
+                        <Spinner
+                            android:id="@+id/speci_math_shudu_test_3"
+                            android:layout_width="200dp"
+                            android:layout_height="25dp"
+                            android:background="@color/white" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp">
+
+                            <LinearLayout
+                                android:id="@+id/xel_specialtopic_math_shuzu"
+                                style="@style/start_btn"
+                                android:orientation="horizontal">
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/start_icon_selector" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

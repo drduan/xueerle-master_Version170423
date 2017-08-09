@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/zhuti">
+
+            <ImageButton
+                android:onClick="break_1"
+                android:id="@+id/guo_left"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/back" />
+            <com.neusoft.sample.View.AlwaysMarqueeTextView
+                android:id="@+id/title_guoxue"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </android.support.v7.widget.Toolbar>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@drawable/boder"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="题目"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:id="@+id/guo_title"
+            android:layout_marginTop="30dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/guo_title"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原文："
+                    android:textSize="18sp"
+                    android:textColor="@color/actionsheet_red"
+                    android:id="@+id/pp"
+                    android:layout_marginLeft="40dp"/>
+
+                <ImageView
+                    android:id="@+id/guo_voice"
+                    android:layout_width="18.0dip"
+                    android:layout_height="18.0dip"
+                    android:src="@drawable/voice"
+                   android:layout_marginTop="5dp"
+                    android:layout_alignRight="@id/pp"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="40dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="译文："
+                    android:textSize="18sp"
+                    android:textColor="@color/actionsheet_red"
+                    android:id="@+id/ppp"
+                    android:layout_marginLeft="20dp"/>
+
+                <ImageView
+                    android:id="@+id/guo_voice_yiwen"
+                    android:layout_width="18.0dip"
+                    android:layout_height="18.0dip"
+                    android:src="@drawable/voice"
+                    android:layout_marginTop="5dp"
+                    android:layout_alignRight="@id/pp"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+            
+           
+        </RelativeLayout>
+       
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="3dp"
+        android:background="@drawable/boder"
+        >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/guoxue_listview"
+            android:divider="#00000000"
+            android:dividerHeight="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            
+            >
+        </ListView>
+       
+        
+    </LinearLayout>
+
+</LinearLayout>

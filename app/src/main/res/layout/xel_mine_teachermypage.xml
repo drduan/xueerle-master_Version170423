@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/teacher_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/teacher_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/teacher_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+
+        <TextView
+            android:id="@+id/teacher_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            android:text="个人信息"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <LinearLayout style="@style/wrap_layout">
+
+                <LinearLayout
+                    android:id="@+id/tea_userIcon_tag"
+                    style="@style/top_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="头像"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <com.neusoft.sample.Ctrl.wenchengcheng.RoundImageView
+                        android:id="@+id/tea_img_userIcon"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/mylose" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/left_arrow" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_motto_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="个性签名"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_motto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text="宝剑锋从磨砺出，梅花香自苦寒来。"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_userID_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="用户名"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_userID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_realName_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="姓名"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_realName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_nickName_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="昵称"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_nickName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_gender_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="性别"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_score_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="积分"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_school_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="学校"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_school"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_subject_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="科目"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_subject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_grade_tag"
+                    android:weightSum="1"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="0.3"
+                        android:text="班级"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:visibility="visible"
+                        android:id="@+id/tea_tv_grade"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.7"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text=""
+                        android:lineSpacingExtra="8dp"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                    <ListView android:id="@+id/tea_lv_grade"
+                        android:visibility="gone"
+                        android:layout_weight="0.7"
+                        android:layout_width="0dp"
+                        android:dividerHeight="0dp"
+                        android:layout_height="wrap_content">
+
+                    </ListView>
+                </LinearLayout>
+
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_QQID_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="QQ"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_qqNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text="84526789"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_mail_tag"
+                    style="@style/mid_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="邮箱"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_mailUrl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text="xelProject@xel.cn"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <View style="@style/bg_line" />
+
+                <LinearLayout
+                    android:id="@+id/tea_weinxinID_tag"
+                    style="@style/bottom_layout">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="微信号"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tea_tv_weixinNum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:drawableRight="@drawable/left_arrow"
+                        android:gravity="end"
+                        android:text="wangxiaoer"
+                        android:textColor="#333"
+                        android:textSize="16dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_in_textbooklearn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/zhuti">
+
+        <ImageButton
+            android:id="@+id/img_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/back" />
+        <com.neusoft.sample.View.AlwaysMarqueeTextView
+            android:id="@+id/course_eng_learn"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:layout_marginLeft="3dp"
+        android:layout_marginRight="3dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="第一课"
+            android:id="@+id/eng_title"
+            android:textSize="20sp"
+            android:textColor="@color/background_color1"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:orientation="horizontal"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_curcentTime_eng_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="00:00" />
+        <SeekBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/seekBar1_eng"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:progress="0"
+            android:minHeight="10dp"
+            android:maxHeight="10dp"
+            android:progressDrawable="@drawable/seekbar_style"
+            android:secondaryProgress="100"
+            />
+
+        <TextView
+            android:id="@+id/tv_allTime_eng"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="00:00" />
+        <Button
+           android:id="@+id/stop_eng_btn"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="暂停"
+            android:textSize="13dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_margin="3dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/U1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="U1" />
+
+        <Button
+            android:id="@+id/U2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="U2" />
+
+        <Button
+            android:id="@+id/english_slow_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="英文慢速"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/english_z_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="英文中速"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/chinese_slow_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="中文慢速"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/chinese_z_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="中文中速"
+            android:textSize="13dp" />
+
+        <Button
+            android:id="@+id/wordlearn_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/red_btn_textbooklearn"
+            android:gravity="center"
+
+            android:padding="3dp"
+            android:text="单词学习"
+            android:textSize="13dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/wordlearn_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+      
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <WebView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:id="@+id/ui_web"
+            android:visibility="gone">
+        </WebView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eng_tingxie"
+            android:layout_marginTop="15dp"
+            
+            >
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="序号"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/background_color1"
+                android:id="@+id/ting1"
+                />
+            <TextView
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="单词"
+                android:gravity="center"
+                android:id="@+id/ting2"
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="释义1"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:id="@+id/ting3"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="释义2"
+                android:gravity="center"
+                android:id="@+id/ting4"
+                android:layout_marginLeft="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/background_color1"/>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eng_tingxie_zhong"
+            android:layout_marginTop="15dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="序号"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/background_color1"
+                />
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="释义"
+                android:gravity="center"
+
+                android:textSize="18sp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="单词"
+                android:gravity="center"
+                android:textSize="18sp"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:textSize="18sp"
+                android:visibility="gone"
+
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/background_color1"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eng_listview"
+            android:divider="@color/alertdialog_line"
+            android:dividerHeight="1dp"
+            ></ListView>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pinyin"
+        android:id="@+id/shi_pinyin"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+     />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="城"
+        android:id="@+id/shi_shici"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+         android:gravity="center"
+
+        />
+
+
+</LinearLayout>

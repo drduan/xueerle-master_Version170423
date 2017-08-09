@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ncapdevi.sample"
+    android:versionCode="1"
+    android:versionName="1.0.2">
+
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.DOWNLOAD_WITHOUT_NOTIFICATION" />
+
+    <application
+        android:name="com.neusoft.sample.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity
+            android:name="com.neusoft.sample.View.users.xel_user_login"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_youxiuzuowenshangxi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.users.Xel_Users_Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.DoEaxm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.users.BuyCourseActivity"
+            android:screenOrientation="portrait" >
+
+            </activity>
+
+        <activity
+            android:name="com.neusoft.sample.View.Confirm_buy"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.xel_course_chinese_textbooklearn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.xel_specialtopic_math_aosai_text"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Xel_Course_Math_RefinedClass"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Xel_Course_Chinese_resourcecomment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.yangkangkang.Xel_Course_English_TextBookLearn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.Xel_SpecialtOpic_Math_Aosai_fenxi"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.Xel_SpecialtOpic_Math_Aosai_Learn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Xel_Course_English_Textbooklearn_wordlearn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.users.xel_user_forgetpassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.xel_math_shudu.Game_4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.xel_math_shudu.Game_6"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.xel_math_shudu.Game_9"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.ActivityGradeResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.Mp3.MusicPlayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Activity_report_wrong"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.ActivityGrade_full_Result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_english_textbooklearn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_bibeigushicimulu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_tuozhangushicimulu"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="com.neusoft.sample.View.Mp3.MusicPlayService"
+            android:enabled="true" />
+
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_chinese_rijiyuelei"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_stu_shici"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_kewai_shici"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_maozedong_shici"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_guoxue_jindian"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.yangkangkang.Xel_Course_Chinese_IdiomaGame"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Vman.Error_question_report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Vman.DoEaxmDoagain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Vman.Activity_report_wrongDoagain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.Vman.ActivityGradeResultDoagain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.xel_mine_studentmypage"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.miaohong.HanZiShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_specialtopic.yangkangkang.xel_specialt_math_shudu_learn"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ImagePickerThemeFullScreen" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.MyHomeWork.MyWorkActivity" />
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_ranklist"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.xel_activity_noo"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.neusoft.sample.View.xel_specialtopic.Xel_SpecialtOpic_englishyufa_learn" />
+        <activity
+            android:name="com.neusoft.sample.View.aosai__SecondActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_DoEaxm"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_Activity_report_wrong"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_ActivityGrade_full_Result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_ActivityGradeResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Question_pdf_loader"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_Error_question_report"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.AoSaiTest.Aosai_DoEaxmDoagain"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_course.yangkangkang.xel_idom_bianxi"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_ranklist_detail" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.MyHomeWork.ParentLookUpWork"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.neusoft.sample.View.xel_course.yangkangkang.xel_idom_jinfanbianxi" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_techangfudao" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_notify.Xel_mine_notify_main"
+            android:label="通知公告"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.MyHomeWork.MyHomeWork"
+            android:label="@string/title_activity_my_home_work"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_Youxiuzuowen_PDFActivity" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_notify.xel_mine_notify_detail" />
+
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="359710993ea3491621b90593b36c7f87" />
+
+        <activity android:name="com.neusoft.sample.View.BottomTabSwitcherActivity" />
+        <activity
+            android:name="com.neusoft.sample.View.xel_mine.Xel_mine_learntrack.Xel_mine_learntrack"
+            android:label="@string/title_activity_xel_mine_learntrack"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_learntrack.Xel_learntrack_detail" />
+        <activity android:name="com.neusoft.sample.View.Teacher.Cuoti_teacher_xiang" />
+        <activity android:name="com.neusoft.sample.View.xel_error.TeacherWrongactivity" />
+        <activity android:name="com.neusoft.sample.View.xel_mine.Xel_mine_teachermypage"></activity>
+
+        <!-- alipay sdk begin -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+
+        <!-- alipay sdk end -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.neusoft.sample.View.CustomView.FontTextView    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:text="zhong"
+    android:textSize="16sp"
+    typefaceName="youyuan"
+    android:gravity="center_vertical"
+    android:id="@+id/register_sponer_tv_id"
+    android:textColor="@color/background_color1"
+    xmlns:android="http://schemas.android.com/apk/res/android" />
